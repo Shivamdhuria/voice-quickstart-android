@@ -12,7 +12,7 @@ android {
         applicationId "com.twilio.examplecustomaudiodevice"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
+        versionCode 2
         versionName "1.0"
     }
 
@@ -25,21 +25,21 @@ android {
     }
 
     // Specify that we want to split up the APK based on ABI
-    splits {
-        abi {
-            // Enable ABI split
-            enable true
-
-            // Clear list of ABIs
-            reset()
-
-            // Specify each architecture currently supported by the Video SDK
-            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-
-            // Specify that we do not want an additional universal SDK
-            universalApk false
-        }
-    }
+//    splits {
+//        abi {
+//            // Enable ABI split
+//            enable true
+//
+//            // Clear list of ABIs
+//            reset()
+//
+//            // Specify each architecture currently supported by the Video SDK
+//            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+//
+//            // Specify that we do not want an additional universal SDK
+//            universalApk false
+//        }
+//    }
 }
 
 dependencies {
@@ -52,7 +52,7 @@ dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.squareup.retrofit:retrofit:1.9.0'
     implementation 'com.koushikdutta.ion:ion:2.1.8'
-    implementation 'com.google.firebase:firebase-messaging:17.6.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 }

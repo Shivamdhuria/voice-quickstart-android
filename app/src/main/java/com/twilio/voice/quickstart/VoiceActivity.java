@@ -71,7 +71,7 @@ public class VoiceActivity extends AppCompatActivity {
      *
      * For example : https://myurl.io/accessToken.php
      */
-    private static final String TWILIO_ACCESS_TOKEN_SERVER_URL = "TWILIO_ACCESS_TOKEN_SERVER_URL";
+    private static final String TWILIO_ACCESS_TOKEN_SERVER_URL = "https://3f4676300ce6.ngrok.io/accessToken";
 
     private static final int MIC_PERMISSION_REQUEST_CODE = 1;
 
@@ -713,6 +713,8 @@ public class VoiceActivity extends AppCompatActivity {
 
     private void showIncomingCallDialog() {
         SoundPoolManager.getInstance(this).playRinging();
+        Log.e("Voice Activity", "showIncomingCallDialog");
+//        Log.d("Voice Activity", activeCallInvite.toString());
         if (activeCallInvite != null) {
             alertDialog = createIncomingCallDialog(VoiceActivity.this,
                     activeCallInvite,
